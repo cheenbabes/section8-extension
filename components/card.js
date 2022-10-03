@@ -265,6 +265,15 @@ const CARD_BODY_LISTING = `
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
+
+    <div id="local-score" class="d-flex align-items-center justify-content-between score-line">
+      <img src="https://homeluten.com/images/local-30.svg">
+      <span class="status-label">Section 8</span>
+      <span class="status-number fs-5 ms-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#section8" title="2023 FMR (Fair Market Rent) for the given zip code"></span>
+      <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+  </div>
   </div>
 `
 
