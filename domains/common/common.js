@@ -1,3 +1,29 @@
+function loadSection8Data(userData, locationData, addressData) {
+  console.log('Trying to load section 8 data')
+  let currentHomeData = getCurrentPageHomeInfo();
+  $.ajax({
+    url: `https://section8-api.herokuapp.com/fmr/${addressData.zipcode}/2`,
+    dataType: 'json',
+    success: function(data) {
+      console.log(' got data from API', data)
+      // return if no data
+      if (!data) {
+        $('#section8 .spinner-border').hide()
+        $('#section8 .status-number').text(`N/A`)
+
+        return;
+      }
+
+      $('#section8 .spinner-border').hide()
+      $('#section8 .status-number').text(data)
+      
+    },
+    error: handleAjaxTimeout,
+    timeout: 30000
+  })
+}
+
+
 function loadSuperfundData({lat, lng}) {
   $.ajax({
     url: `https://api.homeluten.com/superfund?lat=${lat}&lng=${lng}&radius=1`,

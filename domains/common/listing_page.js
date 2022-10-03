@@ -5,7 +5,8 @@ function initWebAppLink({lat, lng}) {
 }
 
 // Add event listeners and init listing with stored state
-function restoreAndInitListingCardSettings(userData, locationData, context) {
+function restoreAndInitListingCardSettings(userData, locationData, context, addressData) {
+    console.log(userData, locationData, context, addressData)
     loadSuperfundData(locationData)
     loadSoundscoreData(userData, locationData)
     loadPaperBidding(userData, context, locationData)
@@ -15,6 +16,7 @@ function restoreAndInitListingCardSettings(userData, locationData, context) {
     loadIncome(userData, locationData)
     loadFlood(userData, locationData)
     loadAnalysis(userData, locationData)
+    loadSection8Data(userData, locationData, addressData)
   
     initTooltip()
     initProModal()
@@ -22,7 +24,7 @@ function restoreAndInitListingCardSettings(userData, locationData, context) {
     initWebAppLink(locationData)
   }
 
-function redfinListingPageHandler(userData, locationData, context) {
+function redfinListingPageHandler(userData, locationData, context, addressData) {
   $(document.getElementsByTagName("body")[0]).append(CARD_LISTING)
   $("#homeluten-listing-container .card-body").append(CARD_BODY_LISTING)
   // toggle/close card
@@ -46,7 +48,7 @@ function redfinListingPageHandler(userData, locationData, context) {
     $homelutenContainer.remove()
   });
 
-  restoreAndInitListingCardSettings(userData, locationData, context)
+  restoreAndInitListingCardSettings(userData, locationData, context, addressData)
   showProReviewPromo(userData)
 }
 
@@ -65,7 +67,7 @@ function listingPageModule(userData, context) {
       var lat, lng
       [lat, lng] = data?.resourceSets[0]?.resources[0]?.point?.coordinates || []
       // the handler
-      redfinListingPageHandler(userData, {lat, lng}, context);
+      redfinListingPageHandler(userData, {lat, lng}, context, addressData);
     },
     error: function(data, status, error){
       // show error message
