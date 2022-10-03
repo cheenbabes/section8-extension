@@ -37,7 +37,7 @@
    },
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4MkzQZQnIq8y5DSo467bLZaW4cZw2SWp/uMy9o6e4k/3vyD+epurTXbBIVCwSk/7VlIvp+f62ONHN04/w5QO/YsF+NELidnQKyauUeevXPI2+vAkHwHHKX2O+UTePdZymZX895P63fGWNc04CDZyGnagutCICWvdPVe7Oxc396luEPm5hsvJ17td5gwKqx6nQw4F6/dEXvCMyCCFstLHnw3unTmX45oYXXd8SvbHqkiykeJ/3B55a8fDiqzIctRlguts2R+MH64cqIi55JTK1PmJJGfCq6jdLG1+2fF/0pokEFg16I0qT7Xhi5KBCgfgO4lUznvca90k2tvbr4rcCQIDAQAB",
    "manifest_version": 2,
-   "name": "Zillow Redfin Realtor Real Estate Supercharge",
+   "name": "Yuga's Section 8",
    "options_page": "/options/options.html",
    "permissions": [ "storage", "activeTab" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
