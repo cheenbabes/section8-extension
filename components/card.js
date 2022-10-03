@@ -84,7 +84,7 @@ const CARD_BODY_MAP = `
     <div id="map-power-line-selector" class="selector-item login-exclusive">
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="map-power-line-selector-input" disabled>
-        <label class="form-check-label login-exclusive" for="map-power-line-selector-input" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#map-power-line-selector" title="High Voltage Power Transimission Lines in the United States.">Show Power Lines</label>
+        <label class="form-check-label login-exclusive" for="map-power-line-selector-input" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#map-power-line-selector" title="High Voltage Power Transmission Lines in the United States.">Show Power Lines</label>
         <span id="login-badge" class="badge rounded-pill text-gray bg-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#map-power-line-selector" title="This PRO feature if free to use if you login.">Login</span>
       </div>
     </div>
@@ -260,7 +260,7 @@ const CARD_BODY_LISTING = `
       <img src="https://homeluten.com/images/analysis-30.svg">
       <span class="badge rounded-pill text-gray" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#market-analysis" title="This is a PRO exclusive feature.">Pro</span>
       <span class="status-label">Price Analysis</span>
-      <span class="status-number fs-6 ms-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#market-analysis" title="See distrubutions of nearby on sale and sold homes so you can immediately tell if a home is overpriced or underpriced, as well as what the reasonable price range this home should be."></span>
+      <span class="status-number fs-6 ms-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-container="#market-analysis" title="See distributions of nearby on sale and sold homes so you can immediately tell if a home is overpriced or underpriced, as well as what the reasonable price range this home should be."></span>
       <div class="spinner-border text-light" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
