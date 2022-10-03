@@ -1,0 +1,46 @@
+{
+   "author": "Homeluten",
+   "background": {
+      "persistent": true,
+      "scripts": [ "/lib/firebase-app.js", "/lib/firebase-firestore.js", "/lib/firebase-remote-config.js", "/lib/firebase-auth.js", "/configs/firebase_init.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "/images/homeluten_logo.png",
+         "16": "/images/homeluten_logo.png",
+         "32": "/images/homeluten_logo.png",
+         "48": "/images/homeluten_logo.png",
+         "512": "/images/homeluten_logo.png"
+      },
+      "default_popup": "popup/popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "/dest/homeluten-bootstrap.css", "/styles/container.css", "/styles/stars.css" ],
+      "js": [ "/lib/jquery.js", "/lib/bootstrap.js", "/lib/hammer.js", "/lib/chart.js", "/lib/chart-plugin-zoom.js", "/utils/utils.js", "/vendors/crimeometer/iconconfig.js", "/components/card.js", "/components/paper_bidding.js", "/domains/common/common.js", "/domains/redfin.com/redfin_map.js", "/domains/common/listing_page.js", "/homeluten.js" ],
+      "matches": [ "https://*.redfin.com/*" ]
+   }, {
+      "all_frames": true,
+      "css": [ "/dest/homeluten-bootstrap.css", "/styles/container.css", "/styles/stars.css" ],
+      "js": [ "/lib/jquery.js", "/lib/bootstrap.js", "/lib/hammer.js", "/lib/chart.js", "/lib/chart-plugin-zoom.js", "/utils/utils.js", "/components/card.js", "/components/paper_bidding.js", "/domains/common/common.js", "/domains/common/listing_page.js", "/homeluten.js" ],
+      "matches": [ "https://*.zillow.com/*", "https://*.realtor.com/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "description": "Help you make an informed real estate decision by showing extra data like nearby Natural Hazards and Crimes.",
+   "differential_fingerprint": "1.7992164442fd71701da8208a7af5f27b259451f7c2e57c33e2c3be8921cbf511",
+   "icons": {
+      "128": "/images/homeluten_logo.png",
+      "16": "/images/homeluten_logo.png",
+      "32": "/images/homeluten_logo.png",
+      "48": "/images/homeluten_logo.png",
+      "512": "/images/homeluten_logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4MkzQZQnIq8y5DSo467bLZaW4cZw2SWp/uMy9o6e4k/3vyD+epurTXbBIVCwSk/7VlIvp+f62ONHN04/w5QO/YsF+NELidnQKyauUeevXPI2+vAkHwHHKX2O+UTePdZymZX895P63fGWNc04CDZyGnagutCICWvdPVe7Oxc396luEPm5hsvJ17td5gwKqx6nQw4F6/dEXvCMyCCFstLHnw3unTmX45oYXXd8SvbHqkiykeJ/3B55a8fDiqzIctRlguts2R+MH64cqIi55JTK1PmJJGfCq6jdLG1+2fF/0pokEFg16I0qT7Xhi5KBCgfgO4lUznvca90k2tvbr4rcCQIDAQAB",
+   "manifest_version": 2,
+   "name": "Zillow Redfin Realtor Real Estate Supercharge",
+   "options_page": "/options/options.html",
+   "permissions": [ "storage", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.5.2",
+   "web_accessible_resources": [ "lib/jquery.js" ]
+}
